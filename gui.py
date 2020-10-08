@@ -11,7 +11,14 @@ def runpograme():
     print(e3_value.get())
     t3.insert(END,e3_value.get())
 
+ip_addr = Label(window,  text = "IP Address")
+ip_addr.grid(row=0,column=0)
 
+start_port = Label(window,  text = "Starting port")
+start_port.grid(row=1,column=0)
+
+End_port = Label(window,  text = "Ending port")
+End_port.grid(row=2,column=0)
 
 e1_value=StringVar()
 e1=Entry(window, textvariable=e1_value)
@@ -34,9 +41,9 @@ e3.grid(row=2,column=1)
 t3=Text(window,height=1,width=20)
 t3.grid(row=2,column=2)
 
-b1=Button(window,text="show",command=runpograme)
+b1=Button(window,text="Check",command=runpograme)
 b1.grid(row=3,column=1)
-b2=Button(window,text="Execute",command=runpograme)
+b2=Button(window,text="Scan",command=runpograme)
 b2.grid(row=3,column=2)
 
 window.mainloop()
